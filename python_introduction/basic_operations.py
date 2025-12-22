@@ -1,4 +1,5 @@
 #!/bin/python3
-print("Addition of 10 and 5 is", 10 + 5)
-print("Substraction of 10 and 5 is", 10 - 5)
-print("Multiplication of 10 and 5 is", 10 * 5)
+number1, number2 = 10, 5
+print(f"Addition of {number1} and {number2} is", number1 + number2)
+print(f"Substraction of {number1} and {number2} is", number1 - number2)
+print(f"Multiplication of {number1} and {number2} is", number1 * number2)
