@@ -19,13 +19,12 @@ match priority:
         reminder = f"'{task}' is a medium priority task"
     case "low":
         reminder = f"'{task}' is a low priority task"
-    case _:
-        reminder = f"'{task}' has an undefined priority"
 
 if time_bound == "yes":
     reminder += " that requires immediate attention today!"
 else:
     reminder += ". Consider completing it when you have free time."
 
-print("\nReminder:", reminder)
-
+print(f"Reminder: {reminder}")
+print("Well done on completing this project! Let the world hear about this milestone achieved.")
+print("🚀 Click here to tweet! 🚀")
