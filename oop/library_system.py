@@ -1,26 +1,28 @@
 class Book:
-
     def __init__(self, title, author):
         self.title = title
         self.author = author
 
     def __str__(self):
-        status = "Checked out" if self._is_checked_out else "Available"
-        return f"'{self.title}' by {self.author} - {status}"
+        return f"Book: {self.title} by {self.author}"
+
 
 class EBook(Book):
-    
-    def __init__(self, file_size, title, author):
-
+    def __init__(self, title, author, file_size_kb):
         super().__init__(title, author)
-        self.file_size = file_size
+        self.file_size_kb = file_size_kb
+
+    def __str__(self):
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size_kb}KB"
+
 
 class PrintBook(Book):
-
     def __init__(self, title, author, page_count):
-
         super().__init__(title, author)
         self.page_count = page_count
+
+    def __str__(self):
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 class Library:
 
