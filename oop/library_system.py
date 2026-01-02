@@ -4,6 +4,9 @@ class Book:
         self.title = title
         self.author = author
 
+    def __str__(self):
+        status = "Checked out" if self._is_checked_out else "Available"
+        return f"'{self.title}' by {self.author} - {status}"
 
 class EBook(Book):
     
